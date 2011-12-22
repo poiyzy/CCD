@@ -28,14 +28,14 @@
     <table cellpadding="0" cellspacing="0" border="0" width="100%" class="dual">
         <tr>
             <td width="auto" class="dual_left" valign="top"><div class="inner">
-<h1>文章列表</h1>
+<h1>报名情况</h1>
 <div class="sep20"></div>
 
 <div id="projects">
 
-<% @posts.each do |p| %>
-<div class="project_box" id="p_231"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td width="32" valign="top" align="center"></td><td valign="top" align="left"><h2><a href="/project/mytest"><%= p.title %></a></h2><div class="sep10"></div><small class="gray"><%= p.created_at %></small></td><td valign="top" width="60" align="right"><input type="button" class="super normal button" value="修改" onclick="location.href='/projects/new'" /></td><td valign="top" align="right" width="60"><input type="button" class="super normal button" value="删除" onclick="location.href='/projects/new'" /></td></tr></table></div>
-<% end %>
+	<% @applicants.each do |a| %>
+	<div class="project_box" id="p_231"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td width="32" valign="top" align="center"></td><td valign="top" align="left"><h2><a href="/project/mytest"><%= a.name %></a></h2><div class="sep10"></div><small class="gray"><%= a.created_at %></small></td></tr></table></div>
+	<% end %>
 
 </div>
 
@@ -52,19 +52,19 @@
                         <td colspan="4"><div class="sep20"></div></td>
                     </tr>
                     <tr>
-                        <td width="15" height="32" align="left"><img src="/images/section.png" /></td>
+                        <td width="15" height="32" align="left"></td>
                         <td width="32" height="32"><a href="/admin"><img src="/images/ico32_cog.png" border="0" alt="Projects" /></a></td>
                         <td width="10" height="32"></td>
-                        <td width="auto" height="32" align="left" valign="middle"><a href="/admin" class="nav2 black" style="color:#DB4937;">文章管理</a></td>  
+                        <td width="auto" height="32" align="left" valign="middle"><a href="/admin" class="nav2 black">文章管理</a></td>  
                     </tr>
                     <tr>
                         <td colspan="4"><div class="sep10"></div></td>
                     </tr>
                     <tr>
-                        <td width="15" height="32" align="left"></td>
+                        <td width="15" height="32" align="left"><img src="/images/section.png" /></td>
                         <td width="32" height="32"><a href="/admin/apply"><img src="/images/ico32_member.png" border="0" alt="Account" /></a></td>
                         <td width="10" height="32"></td>
-                        <td width="auto" height="32" align="left" valign="middle"><a href="/admin/apply" class="nav2 black">在线报名情况</a></td>  
+                        <td width="auto" height="32" align="left" valign="middle"><a href="/admin/apply" class="nav2 black" style="color:#DB4937;">在线报名情况</a></td>  
                     </tr>
                     
                     <!--<tr>
