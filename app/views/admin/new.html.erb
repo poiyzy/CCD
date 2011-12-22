@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8" />
+	<meta content="True" name="HandheldFriendly" />
+	<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0; name='viewport'" />
+	<title>希望之星 › 控制面板</title>
+	<link rel="stylesheet" type="text/css" media="screen"  href="stylesheets/desktop.css?v=1.0003" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" href="/static/css/tipsy.css" type="text/css" />
+	
+</head>
+<body>
+    <div id="Wrapper">
+    <div id="Main">
+        <div class="sep20"></div>
+        <table cellpadding="8" cellspacing="0" border="0" width="100%" id="Top">
+            <tr>
+                <td width="140" text-align="center" id="TopLogo" onclick="location.href = '/';">希望之星</td>
+
+                <td width="235" align="right" valign="middle" id="TopMember"><a href="/profile" class="black">aa</td>
+            </tr>
+        </table>
+        <div class="sep20"></div>
+        <div class="c"></div>
+        <div id="Single">
+            
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="dual">
+        <tr>
+            <td width="auto" class="dual_left" valign="top"><div class="inner">
+<h1>新建文章</h1>
+<div class="sep20"></div>
+
+<div id="projects">
+
+<div class="project_box" id="p_231"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	   <td width="auto" class="dual_left" valign="top"><div class="inner">
+			<div class="sep20"></div>
+			<form action="/admin/created" method="post">
+				<table cellpadding="4" cellspacing="0" border="0" width="100%">
+	    			<tr>
+	        			<td width="120" align="right" valign="middle">文章标题</td>
+	        			<td width="auto"><span class="mono"></span> <input type="text" name="title" class="sl" value="" maxlength="32" style="width: 220px;" /></td>
+	    			</tr>
+	    			<tr>
+	        			<td width="120" align="right" valign="middle"></td>
+	        			<td width="auto"><span class="gray f12">项目代号只能使用半角的 a-z 和阿拉伯数字 0-9，全小写。项目代号将会出现在 URL 及文件夹名中。</span></td>
+	    			</tr>
+	    			<tr>
+	        			<td width="120" align="right" valign="middle">图片链接地址</td>
+	        			<td width="auto"><input type="text" name="pic" class="sl" value="" /></td>
+	    			</tr>
+					<tr>
+	        			<td width="120" align="right" valign="middle">视频链接地址</td>
+	        			<td width="auto"><input type="text" name="video" class="sl" value="" /></td>
+	    			</tr>
+	    			<tr>
+	        			<td width="120" align="right" valign="middle">文章分类</td>
+	        			<td width="auto"><select name="cats_id">
+							<option value="0">未分类</option>
+	            			<option value="1">新闻</option>
+	            			<option value="2">图片新闻</option>
+	            			<option value="3">视频</option>
+	        			</select></td>
+	    			</tr>
+	    			<tr>
+	        			<td width="120" align="right" valign="middle">文章内容</td>
+	        			<td width="auto"><textarea name="content" class="ml" rows="15"></textarea></td>
+	    			</tr>
+	    			<tr>
+	        			<td width="120" align="right" valign="middle"></td>
+	        			<td width="auto"></td>
+	    			</tr>
+	    			<tr>
+	        			<td width="120" align="right" valign="middle"></td>
+	        			<td width="auto"><input type="submit" class="super normal button" value="提交" /></td>
+	    			</tr>
+				</table>
+			</form>
+
+	<div class="sep"></div>
+	<div class="sep5"></div>
+	<ul class="tips"><li><strong>项目代号</strong> &nbsp;<span class="secondary">项目代号将会出现在诸如 URL，文件夹和邮件地址这样的地方，因此请使用一个简短且容易记忆的名字，只能使用字母和数字（正则表达式规则 [a-z0-9]{1,32}）。该名字被保存到系统中会是全小写形式。</span><div class="sep10"></div></li><li><strong>项目名称</strong> &nbsp;<span class="secondary">项目的正式名字，可以使用 32 个任意字符。</span><div class="sep10"></div></li><li><strong>产品类型</strong> &nbsp;<span class="secondary">项目所产生的产品的类型。如果尚未确定，请选择 TBD。</span><div class="sep10"></div></li><li><strong>方案定义</strong> &nbsp;<span class="secondary">项目的成功，需要一个清晰的方案定义（Solution Definition）。项目究竟打算为谁解决什么问题，请用一句话清晰描述。很多时候，也就是创业公司的 Mission Statement。请一定花时间细细打磨你的方案定义。</span></li></ul>
+
+	                </div>
+	            </td>
+
+	
+</table></div>
+
+</div>
+
+
+                </div>
+            </td>
+            <td width="250" class="dual_right" valign="top" style="background-image: url('/images/shade1.png'); background-repeat: repeat-y;">
+                
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td colspan="4"><div class="sep20"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="15" height="32" align="left"><img src="/images/section.png" /></td>
+                        <td width="32" height="32"><a href="/"><img src="/images/ico32_member.png" border="0" alt="Projects" /></a></td>
+                        <td width="10" height="32"></td>
+                        <td width="auto" height="32" align="left" valign="middle"><a href="/" class="nav2 black">在线报名情况</a></td>  
+                    </tr>
+                    <tr>
+                        <td colspan="4"><div class="sep10"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="15" height="32" align="left"></td>
+                        <td width="32" height="32"><a href="/account"><img src="/images/ico32_cog.png" border="0" alt="Account" /></a></td>
+                        <td width="10" height="32"></td>
+                        <td width="auto" height="32" align="left" valign="middle"><a href="/account" class="nav2 black">文章管理</a></td>  
+                    </tr>
+                    
+                    <!--<tr>
+                        <td colspan="4"><div class="sep10"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="15" height="32" align="left"></td>
+                        <td width="32" height="32"><a href="/stats"><img src="/static/images/ico32_stats.png" border="0" alt="Stats" /></a></td>
+                        <td width="10" height="32"></td>
+                        <td width="auto" height="32" align="left" valign="middle"><a href="/stats" class="nav2 black">Stats</a></td>  
+                    </tr>
+                    <tr>
+                        <td colspan="4"><div class="sep10"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="15" height="32" align="left"></td>
+                        <td width="32" height="32"><a href="/experimental"><img src="/static/images/ico32_labs.png" border="0" alt="Experimental" /></a></td>
+                        <td width="10" height="32"></td>
+                        <td width="auto" height="32" align="left" valign="middle"><a href="/experimental" class="nav2 black">Experimental</a></td>  
+                    </tr>-->
+                    <tr>
+                        <td colspan="4"><div class="sep20"></div></td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+    </table>
+
+        </div>
+        <div class="c"></div>
+        <div class="sep20"></div>
+        <div id="Bottom">&copy; 2011 <strong>希望之星</strong>&nbsp; • &nbsp;<a href="http://www.jiazhang.org" class="bottom" title="" rel="tipsy">山西省网上家长学校技术驱动</a><div class="sep5"></div></div>
+    </div>
+    </div>
+</body>
+</html>

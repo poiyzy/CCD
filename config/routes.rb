@@ -1,4 +1,18 @@
 Cctvoe::Application.routes.draw do
+  resources :apply do
+    collection do
+      get  :index
+      post :created
+    end
+  end
+  
+  resources :admin do
+    collection do
+      get  :index
+      get :new
+      post :created
+    end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
