@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2012年度希望之星英语风采大赛太原赛区</title>
+<style>
+body,h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd{padding:0;margin:0;}
+ul li {
+	list-style-type: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #999;
+	display: block;
+	float: left;
+	width: 675px;
+	padding-bottom: 3px;
+	height: 16px;
+	padding-top: 5px;
+}
+
+</style>
+<link href="/stylesheets/cate.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<div id="top"><img src="/images/topbg.jpg" width="980" height="270" border="0" /></div>
+<div id="main">
+  <div class="news">
+    	<div class="newsli">
+    	  <ul>
+			<% @posts.each do |p| %>
+          	<li>
+          	  <div class="licate"><%= p.cats_id %></div><div class="licontent"><%= p.title %></div><div class="litime"><%= l(p.created_at, :format => :short) %></div>
+            </li>
+			<% end %>
+          </ul>
+        </div>
+	</div>
+	<div class="cooperation">
+    	<div class="petition"><img src="/images/baoming.jpg" width="239" height="259" border="0" usemap="#Map" />
+          <map name="Map" id="Map">
+            <area shape="rect" coords="47,211,193,250" href="#" />
+          </map>
+		</div>
+	    <div class="weibo">
+        	<iframe id="iframeid" name="ifrmname" frameborder="0" scrolling="No" src="http://t.jiazhang.org/index.php?mod=share&code=cctvoe" width="238px" height="308px"></iframe>
+
+      </div>
+	</div>
+
+</div>
+<div id="foot">
+	<div class="foottext">合作机构</div>
+	<div class="footpic"><img src="/images/hezuo.jpg" /></div>
+</div>
+</body>
+</html>

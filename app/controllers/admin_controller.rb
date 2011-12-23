@@ -3,7 +3,7 @@ class AdminController < ApplicationController
     @posts = Post.all
   end
   
-  def new    
+  def new
   end
   
   def created

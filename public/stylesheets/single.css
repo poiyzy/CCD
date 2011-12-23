@@ -1,0 +1,138 @@
+@charset "utf-8";
+#top {
+	height: 270px;
+	width: 980px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#main {
+	height:auto;
+	min-height:610px;
+	width: 980px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#main .news {
+	display: block;
+	float: left;
+	min-height:610px;
+	height: auto;
+	width: 720px;
+}
+#main .news .newsnavi {
+	font-size: 14px;
+	display: block;
+	float: left;
+	width: 700px;
+	padding-top: 10px;
+	padding-left: 19px;
+	height: 20px;
+}
+#main .news .newscontent {
+	display: block;
+	float: left;
+	min-height:570px;
+	height: auto;
+	width: 700px;
+	padding-top: 10px;
+	padding-left: 19px;
+}
+.ctitle {
+	font-size: 14px;
+	font-weight: bold;
+	color: #2D5EA1;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 30px;
+	width: 699px;
+}
+.ctime {
+	font-size: 12px;
+	color: #999;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 20px;
+	width: 699px;
+	padding-top: 10px;
+}
+.ccontent {
+	font-size: 14px;
+	color: #000;
+	display: block;
+	float: left;
+	width: 689px;
+	padding-top: 10px;
+	line-height: 1.5;
+	padding-right: 10px;
+}
+
+
+
+
+
+.petition {
+	display: block;
+	padding: 10px;
+	float: left;
+	height: 259px;
+	width: 239px;
+}
+
+
+
+#main .cooperation {
+	display: block;
+	float: left;
+	min-height:610px;
+	height:auto;
+	width: 259px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.weibo {
+	display: block;
+	float: left;
+	height: 319px;
+	width: 239px;
+	padding-right: 9px;
+	padding-bottom: 9px;
+	padding-left: 9px;
+}
+
+
+
+#foot {
+	height: 87px;
+	width: 980px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-image: url(/images/footbg.jpg);
+	background-repeat: repeat-x;
+}
+#foot .foottext {
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	display: block;
+	float: left;
+	height: 51px;
+	width: 79px;
+	padding-left: 30px;
+	padding-top: 35px;
+}
+#foot .footpic {
+	display: block;
+	float: left;
+	height: 65px;
+	width: 850px;
+	padding-top: 21px;
+}

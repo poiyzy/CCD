@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><%= @post.title %>--2012年度希望之星英语风采大赛太原赛区</title>
+<style>
+body,h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd{padding:0;margin:0;}
+</style>
+<link href="/stylesheets/single.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<div id="top"><img src="/images/topbg.jpg" width="980" height="270" border="0" /></div>
+<div id="main">
+	<div class="news">
+    	<div class="newsnavi">
+    	  <p><a href="/">首页</a>&nbsp;&nbsp;>&nbsp;&nbsp;<a href="/posts/cats/<%= @post.cats_id %>"><%= @cat %></a>
+          </p>
+    	</div>
+        <div class="newscontent">
+        	<div class="ctitle">
+        	  <h1><%= @post.title %></h1>
+        	</div>
+            <div class="ctime"><%= l(@post.created_at, :format => :short) %></div>
+            <div class="ccontent"><%= @post.content %></div>
+      </div>
+        	
+	</div>
+	<div class="cooperation">
+    	<div class="petition"><img src="/images/baoming.jpg" width="239" height="259" border="0" usemap="#Map" />
+          <map name="Map" id="Map">
+            <area shape="rect" coords="47,211,193,250" href="/apply" />
+          </map>
+		</div>
+	    <div class="weibo">
+        	<iframe id="iframeid" name="ifrmname" frameborder="0" scrolling="No" src="http://t.jiazhang.org/index.php?mod=share&code=cctvoe" width="238px" height="308px"></iframe>
+        </div>
+	</div>
+
+</div>
+<div id="foot">
+	<div class="foottext">合作机构</div>
+	<div class="footpic"><img src="/images/hezuo.jpg" /></div>
+</div>
+</body>
+</html>

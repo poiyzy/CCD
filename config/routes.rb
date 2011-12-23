@@ -1,19 +1,31 @@
 Cctvoe::Application.routes.draw do
+  root :to => "posts#index"
+  
   resources :apply do
     collection do
-      get  :index
+      get :index
       post :created
     end
   end
   
   resources :admin do
     collection do
-      get  :index
+      get :index
       get :new
       post :created
       get :apply
     end
   end
+  
+    
+  resources :posts do
+    collection do
+      get :index
+    end
+  end
+  
+  match "/posts/cats/:id" => "posts#cats", :constraints => {:id => /\d/}
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
