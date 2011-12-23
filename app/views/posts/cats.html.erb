@@ -31,7 +31,7 @@ ul li {
     	  <ul>
 			<% @posts.each do |p| %>
           	<li>
-          	  <div class="licate"><%= p.cats_id %></div><div class="licontent"><%= p.title %></div><div class="litime"><%= l(p.created_at, :format => :short) %></div>
+          	  <div class="licate"><%= @cat %></div><div class="licontent"><%= p.title %></div><div class="litime"><%= l(p.created_at, :format => :short) %></div>
             </li>
 			<% end %>
           </ul>

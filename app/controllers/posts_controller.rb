@@ -7,20 +7,21 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find(params[:id])
-    cat_name
+    cat_name(@post.cats_id)
   end
   
   def cats
     @posts = Post.find(:all, :conditions => { :cats_id => params[:id]})
-    cat_name
+    cat_name(params[:id])   
   end
   
-  def cat_name
-    if params[:id] = "1"
+  private
+  def cat_name(some_id)
+    if some_id.to_s == "1"
       @cat = "大赛新闻"
-    elsif params[:id] = "2"
+    elsif some_id.to_s == "2"
       @cat = "选手风采"
-    elsif params[:id] = "3"
+    elsif some_id.to_s == "3"
       @cat = "大赛视频"
     end
   end

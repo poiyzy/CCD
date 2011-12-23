@@ -6,7 +6,8 @@
 	<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0; name='viewport'" />
 	<title>希望之星 › 控制面板</title>
 	<link rel="stylesheet" type="text/css" media="screen"  href="/stylesheets/desktop.css?v=1.0003" />
-	<link rel="shortcut icon" href="/favicon.ico" />	
+	<link rel="shortcut icon" href="/favicon.ico" />
+	
 </head>
 <body>
     <div id="Wrapper">
@@ -35,11 +36,11 @@
 	<tr>
 	   <td width="auto" class="dual_left" valign="top"><div class="inner">
 			<div class="sep20"></div>
-			<form action="/admin/created" method="post">
+			<form action="/admin/updating/<%= @post.id %>" method="post">
 				<table cellpadding="4" cellspacing="0" border="0" width="100%">
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">文章标题</td>
-	        			<td width="auto"><span class="mono"></span> <input type="text" name="title" class="sl" value="" maxlength="32" style="width: 220px;" /></td>
+	        			<td width="auto"><span class="mono"></span> <input type="text" name="title" class="sl" value="<%= @post.title %>" maxlength="32" style="width: 220px;" /></td>
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle"></td>
@@ -47,24 +48,27 @@
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">图片链接地址</td>
-	        			<td width="auto"><input type="text" name="pic" class="sl" value="" /></td>
+	        			<td width="auto"><input type="text" name="pic" class="sl" value="<%= @post.pic %>" /></td>
 	    			</tr>
 					<tr>
 	        			<td width="120" align="right" valign="middle">视频链接地址</td>
-	        			<td width="auto"><input type="text" name="video" class="sl" value="" /></td>
+	        			<td width="auto"><input type="text" name="video" class="sl" value="<%= @post.video %>" /></td>
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">文章分类</td>
-	        			<td width="auto"><select name="cats_id">
-							<option value="0">未分类</option>
-	            			<option value="1">大赛新闻</option>
-	            			<option value="2">选手风采</option>
-	            			<option value="3">大赛视频</option>
-	        			</select></td>
+	        			<td width="auto">
+							<select name="cats_id">
+								<option value="<%= @post.cats_id %>">原先选择：<%= @cat %></option>
+								<option value="0">未分类</option>
+		            			<option value="1">大赛新闻</option>
+		            			<option value="2">选手风采</option>
+		            			<option value="3">大赛视频</option>
+		        			</select>
+						</td>
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">文章内容</td>
-	        			<td width="auto"><textarea name="content" class="ml" rows="15"></textarea></td>
+	        			<td width="auto"><textarea name="content" class="ml" rows="15"><%= @post.content %></textarea></td>
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle"></td>
