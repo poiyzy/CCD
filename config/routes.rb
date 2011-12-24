@@ -21,7 +21,7 @@ Cctvoe::Application.routes.draw do
   
   match "/posts/cats/:id" => "posts#cats"
   match "/admin/del/:id" => "admin#del"
-  match "/admin/updating/:id" => "admin#updating", :var => "put"
+  match "/admin/updating/:id" => "admin#updating"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

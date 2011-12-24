@@ -27,6 +27,7 @@
         <tr>
             <td width="auto" class="dual_left" valign="top"><div class="inner">
 <h1>新建文章</h1>
+
 <div class="sep20"></div>
 
 <div id="projects">
@@ -35,11 +36,11 @@
 	<tr>
 	   <td width="auto" class="dual_left" valign="top"><div class="inner">
 			<div class="sep20"></div>
-			<form action="/admin/created" method="post">
+			<%= form_for @post, :url => {:controller => "admin", :action => "created"} do |f| %>
 				<table cellpadding="4" cellspacing="0" border="0" width="100%">
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">文章标题</td>
-	        			<td width="auto"><span class="mono"></span> <input type="text" name="title" class="sl" value="" maxlength="32" style="width: 220px;" /></td>
+	        			<td width="auto"><span class="mono"></span> <%= f.text_field :title, :class => "sl", :style => "width:220px;", :maxlength => "32" %></td>
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle"></td>
@@ -47,24 +48,21 @@
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">图片链接地址</td>
-	        			<td width="auto"><input type="text" name="pic" class="sl" value="" /></td>
+	        			<td width="auto"><%= f.text_field :pic, :class => "sl" %></td>
 	    			</tr>
 					<tr>
 	        			<td width="120" align="right" valign="middle">视频链接地址</td>
-	        			<td width="auto"><input type="text" name="video" class="sl" value="" /></td>
+	        			<td width="auto"><%= f.text_field :video, :class => "sl" %></td>
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">文章分类</td>
-	        			<td width="auto"><select name="cats_id">
-							<option value="0">未分类</option>
-	            			<option value="1">大赛新闻</option>
-	            			<option value="2">选手风采</option>
-	            			<option value="3">大赛视频</option>
-	        			</select></td>
+	        			<td width="auto">
+							<%= f.select(:cats_id, options_for_select([['未分类'], ['大赛新闻', 1], ['选手风采', 2], ['大赛视频', 3]]))%>
+						</td>
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">文章内容</td>
-	        			<td width="auto"><textarea name="content" class="ml" rows="15"></textarea></td>
+	        			<td width="auto"><%= f.text_area :content, :rows => 15, :class => "ml" %></td>
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle"></td>
@@ -72,10 +70,10 @@
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle"></td>
-	        			<td width="auto"><input type="submit" class="super normal button" value="提交" /></td>
+	        			<td width="auto"><%= f.submit "提交", :class => "super normal button" %></td>
 	    			</tr>
 				</table>
-			</form>
+			<% end %>
 
 	<div class="sep"></div>
 	<div class="sep5"></div>
