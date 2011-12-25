@@ -1,4 +1,6 @@
 class AdminController < ApplicationController
+  before_filter :authenticate_user!
+  
   def index
     @posts = Post.all
   end
@@ -56,6 +58,16 @@ class AdminController < ApplicationController
       @cat = "选手风采"
     elsif some_id.to_s == "3"
       @cat = "大赛视频"
+    end
+  end
+  
+  private
+  def authenticate_user!
+    if session[:user_id] == 1
+      return
+    else
+      flash[:notice] = "您需要先登陆才能访问！"
+      redirect_to new_login_path
     end
   end
 end

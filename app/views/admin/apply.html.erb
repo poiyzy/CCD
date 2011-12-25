@@ -16,7 +16,7 @@
             <tr>
                 <td width="140" text-align="center" id="TopLogo" onclick="location.href = '/';">希望之星</td>
 
-                <td width="235" align="right" valign="middle" id="TopMember"><a href="/profile" class="black">aa</td>
+                <td width="235" align="right" valign="middle" id="TopMember">用户：<%= session[:user_login] %> | <%= link_to "退出", quit_login_index_path, :class => "black" %></td>
             </tr>
         </table>
         <div class="sep20"></div>

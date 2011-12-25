@@ -23,6 +23,12 @@ Cctvoe::Application.routes.draw do
   match "/admin/del/:id" => "admin#del"
   match "/admin/updating/:id" => "admin#updating"
   
+  resources :login do
+    collection do
+      get :quit
+    end
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
