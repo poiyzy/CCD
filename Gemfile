@@ -5,6 +5,8 @@ gem 'rails', '3.0.9'
 gem 'capistrano'
 gem 'capistrano-ext'
 
+gem 'sqlite3'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
