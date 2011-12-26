@@ -274,6 +274,7 @@ label {
 <div id="page">
 <h1>希望之星英语风采大赛太原赛区</h1>
 <div id="login_form">
+
 <%= form_tag login_index_path do -%>
 <ul class="clearfix">
 <li>
@@ -291,7 +292,7 @@ label {
 </ul>
 </form>
 <% end %>
-<div class="zu-index-link-apply-x2 r5px"></div>
+<div class="zu-index-link-apply-x2 r5px"><%= flash[:notice] %></div>
 </div>
 <div id="footer">
 <p>© 2012 希望之星英语风采大赛太原赛区 · <a href="http://blog.zhihu.com/" target="_blank">山西省网上家长学校驱动</a>

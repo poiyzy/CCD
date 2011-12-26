@@ -10,13 +10,14 @@ class LoginController < ApplicationController
       flash[:notice] = "用户： #{@user.login}"
       redirect_to admin_index_path
     else
-      flash[:notice] = "The username or password is not correct."
+      flash[:notice] = "用户名或密码不正确。"
       redirect_to new_login_path
     end
   end
   
   def quit
     reset_session
+    flash[:notice] = '您已退出。'
     redirect_to new_login_path
   end
 end
