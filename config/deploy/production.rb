@@ -1,7 +1,7 @@
 set :application, "cctvoe"
 set :domain, "rails.jiazhang.org"
 set :repository,  "git@github.com:poiyzy/cctvoe.git"
-set :deploy_to, "/home/apps/cctvoe"
+set :deploy_to, "/home/www/cctvoe"
 
 role :app, domain
 role :web, domain
@@ -13,10 +13,10 @@ set :scm, :git
 set :branch, "master" 
 set :scm_verbose, true 
 set :use_sudo, false
-set :user, "apps"
-set :group, "apps"
+set :user, "www"
+set :group, "www"
 
-default_environment["PATH"] = "/usr/local/bin/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/games"
+default_environment["PATH"] = "/usr/local/bin/ruby:/usr/local/bin:/usr/bin:/bin:/usr/games"
 
 namespace :deploy do 
   desc "restart" 
