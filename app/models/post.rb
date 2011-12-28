@@ -18,7 +18,8 @@ class Post < ActiveRecord::Base
     url = "http://v.youku.com/player/getPlayList/VideoIDS/" + $1
     videoplaylist = open(url).read
     videohash = JSON.parse(videoplaylist)
-    self.video = videohash["data"][0]["logo"]
+    self.video_pic = videohash["data"][0]["logo"]
+    self.video = $1
   end
   
 end

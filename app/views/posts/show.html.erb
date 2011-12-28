@@ -23,7 +23,14 @@ body,h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd{padding:0;margin:0;}
         	  <h1><%= @post.title %></h1>
         	</div>
             <div class="ctime"><%= l(@post.created_at, :format => :short) %></div>
-            <div class="ccontent"><%= @post.content %></div>
+            <div class="ccontent">
+							<% if @post.video_pic %>
+								<div style="height:300px;width:500px;">
+									<embed src="http://player.youku.com/player.php/sid/<%= @post.video %>/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
+								</div>
+							<% end %>
+							<%= @post.content %>
+						</div>
       </div>
         	
 	</div>
