@@ -160,7 +160,7 @@ ul { list-style-type: none;}
             <div class="videotext">
 				<% @postvideos.each do |pv| %>
             		<div class="videoli">
-	                	<div class="video1"><img src="images/xuanshou.gif" width="125" height="80" border="0" /></div>
+	                	<div class="video1"><img src="<%= pv.video %>" width="125" height="80" border="0" /></div>
 	                  	<div class="video2"><a href="/posts/<%= pv.id %>"><%= pv.title %></a></div>
 	                </div>
 				<% end %>

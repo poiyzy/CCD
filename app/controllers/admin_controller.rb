@@ -43,7 +43,7 @@ class AdminController < ApplicationController
     
     @post.delete
     
-    redirect_to admin_index_path
+      redirect_to admin_index_path
   end
   
   def apply
@@ -70,4 +70,5 @@ class AdminController < ApplicationController
       redirect_to new_login_path
     end
   end
+
 end
