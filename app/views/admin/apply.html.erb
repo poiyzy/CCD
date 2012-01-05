@@ -32,7 +32,7 @@
 <div id="projects">
 
 	<% @applicants.each do |a| %>
-	<div class="project_box" id="p_231"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td width="32" valign="top" align="center"></td><td valign="top" align="left"><h2><%= a.name %></h2><div class="sep10"></div><small class="gray"><%= a.created_at %></small></td></tr></table></div>
+	<div class="project_box" id="p_231"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td width="32" valign="top" align="center"></td><td valign="top" align="left"><h2><%= a.name %></h2><div class="sep10"></div><small class="gray"><%= l(a.created_at, :format => :short) %></small></td></tr></table></div>
 	<% end %>
 
 </div>

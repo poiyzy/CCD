@@ -15,9 +15,9 @@ class Post < ActiveRecord::Base
   private
   def youku_cover(videourl)
     %r|http:\/\/v\.youku\.com\/v_show\/id_([\w\d+_-]*)\.html| =~ videourl
-    if $1 == nil
-      self.video_pic = nil
-      self.video = nil
+    unless $1
+      self.video_pic
+      self.video
     else
       url = "http://v.youku.com/player/getPlayList/VideoIDS/" + $1
       videoplaylist = open(url).read

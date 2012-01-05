@@ -18,6 +18,7 @@ class AdminController < ApplicationController
 #      p.video = params[:video]
 #      p.cats_id = params[:cats_id]
 #    end
+
     @post = Post.new(params[:post])
 
     @post.save
