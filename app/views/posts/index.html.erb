@@ -78,7 +78,7 @@ ul { list-style-type: none;}
             <div id="slider">
        			<ul id="sliderContent">
 					<% @postnews.each do |pn| %>
-						<% if pn.pic %>
+						<% unless pn.pic.empty? %>
           				<li class="sliderImage">
                				<a href="/posts/<%= pn.id %>" target="_blank"><img src="<%= pn.pic %>" alt="1" /></a>
               				<span class="top"><strong><%= pn.title %></strong></span>

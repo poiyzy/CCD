@@ -3,7 +3,7 @@ class AdminController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @posts = Post.all
+    @posts = Post.paginate(:page => params[:page], :per_page => 10)
   end
   
   def new
@@ -11,14 +11,6 @@ class AdminController < ApplicationController
   end
   
   def created
-#    @post = Post.new do |p|
-#      p.title = params[:title]
-#      p.content = params[:content]
-#      p.pic = params[:pic]
-#      p.video = params[:video]
-#      p.cats_id = params[:cats_id]
-#    end
-
     @post = Post.new(params[:post])
 
     @post.save
@@ -49,7 +41,7 @@ class AdminController < ApplicationController
   end
   
   def apply
-    @applicants = Applicant.all
+    @applicants = Applicant.paginate(:page => params[:page], :per_page => 10)
   end
   
   protected
