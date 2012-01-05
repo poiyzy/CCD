@@ -15,11 +15,16 @@ class Post < ActiveRecord::Base
   private
   def youku_cover(videourl)
     %r|http:\/\/v\.youku\.com\/v_show\/id_([\w\d+_-]*)\.html| =~ videourl
-    url = "http://v.youku.com/player/getPlayList/VideoIDS/" + $1
-    videoplaylist = open(url).read
-    videohash = JSON.parse(videoplaylist)
-    self.video_pic = videohash["data"][0]["logo"]
-    self.video = $1
+    if $1 == nil
+      self.video_pic = nil
+      self.video = nil
+    else
+      url = "http://v.youku.com/player/getPlayList/VideoIDS/" + $1
+      videoplaylist = open(url).read
+      videohash = JSON.parse(videoplaylist)
+      self.video_pic = videohash["data"][0]["logo"]
+      self.video = $1
+    end
   end
   
 end

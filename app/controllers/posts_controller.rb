@@ -1,9 +1,9 @@
 # encoding: utf-8
 class PostsController < ApplicationController
   def index
-    @postnews = Post.find(:all, :conditions => { :cats_id => 1 })
-    @postpics = Post.find(:all, :conditions => { :cats_id => 2 })
-    @postvideos = Post.find(:all, :conditions => { :cats_id => 3 })
+    @postnews = Post.find(:all, :limit => "9", :conditions => { :cats_id => 1 })
+    @postpics = Post.find(:all, :limit => "8", :conditions => { :cats_id => 2 })
+    @postvideos = Post.find(:all, :limit => "6", :conditions => { :cats_id => 3 })
   end
   
   def show
