@@ -1,6 +1,6 @@
 set :application, "cctvoe"
 set :domain, "rails.jiazhang.org"
-set :repository,  "git@github.com:poiyzy/cctvoe.git"
+set :repository,  "git@github.com:poiyzy/CCD.git"
 set :deploy_to, "/home/www/cctvoe"
 
 role :app, domain
