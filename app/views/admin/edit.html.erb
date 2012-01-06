@@ -46,14 +46,14 @@
 	        			<td width="120" align="right" valign="middle"></td>
 	        			<td width="auto"><span class="gray f12">项目代号只能使用半角的 a-z 和阿拉伯数字 0-9，全小写。项目代号将会出现在 URL 及文件夹名中。</span></td>
 	    			</tr>
+						<% if @post.excerpt_image_file_name %>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">图片</td>
 	        			<td width="auto">
-								<% if @post.excerpt_image %>
 									<%= image_tag(@post.excerpt_image.url(:thumb)) %>
-								<% end %>
 								</td>
 	    			</tr>
+						<% end %>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">上传图片</td>
 	        			<td width="auto"><%= f.file_field :excerpt_image %></td>
