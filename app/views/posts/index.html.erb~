@@ -163,7 +163,7 @@ ul { list-style-type: none;}
 				<% @postvideos.each do |pv| %>
             		<div class="videoli">
 	                	<div class="video1"><img src="<%= pv.video_pic %>" width="125" height="80" border="0" /></div>
-	                  	<div class="video2"><a href="/posts/<%= pv.id %>"><%= truncate(pv.title, :length => 12) %></a></div>
+	                  	<div class="video2"><a href="/posts/<%= pv.id %>"><%= truncate(pv.title) %></a></div>
 	                </div>
 				<% end %>
             </div>
