@@ -119,8 +119,15 @@ body { margin:0; }
 			<div class="clcontent">
 				<table cellpadding="2" cellspacing="3">
 					<form id="form1" method="post" action="/apply/created">
-                                <tbody>								
-								<tr>
+                                <tbody>
+                                  <% if @apply.errors.any? %>
+                                    <% @apply.errors.messages.each do |message| %>
+                                      <tr>
+                                        <td><span class="STYLE4"><%= message.last.last.html_safe %></td>
+                                      </tr>
+                                    <% end %>
+                                  <% end %>
+                      <tr>
                                     <td><span class="STYLE4">E-Mail：</span></td>
                                     <td><span class="STYLE4">
                                     <input name="email" type="text" id="" class="">
