@@ -36,7 +36,7 @@
 	<tr>
 	   <td width="auto" class="dual_left" valign="top"><div class="inner">
 			<div class="sep20"></div>
-			<%= form_for @post, :url => {:controller => "admin", :action => "updating", :id => @post }, :html => {:multipart => true} do |f| %>
+			<%= form_for @post, :url => {:controller => "admin", :action => "created"}, :html => {:multipart => true} do |f| %>
 				<table cellpadding="4" cellspacing="0" border="0" width="100%">
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">文章标题</td>
@@ -44,20 +44,12 @@
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle"></td>
-	        			<td width="auto"><span class="gray f12">只能唯一，请勿重复发布！</span></td>
+	        			<td width="auto"><span class="gray f12">项目代号只能使用半角的 a-z 和阿拉伯数字 0-9，全小写。项目代号将会出现在 URL 及文件夹名中。</span></td>
 	    			</tr>
-						<% if @post.excerpt_image_file_name %>
-	    			<tr>
-	        			<td width="120" align="right" valign="middle">图片</td>
-	        			<td width="auto">
-									<%= image_tag(@post.excerpt_image.url(:thumb)) %>
-								</td>
-	    			</tr>
-						<% end %>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">上传图片</td>
-	        			<td width="auto"><%= f.file_field :excerpt_image %></td>
-	    			</tr>								
+	        			<td width="auto"><%= f.file_field :excerpt_image, :class => "super normal button" %></td>
+	    			</tr>
 						<tr>
 	        			<td width="120" align="right" valign="middle">视频链接地址</td>
 	        			<td width="auto"><%= f.text_field :video_share, :class => "sl" %></td>
@@ -65,7 +57,7 @@
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">文章分类</td>
 	        			<td width="auto">
-							<%= f.select :cats_id, options_for_select([['未分类'], ['大赛新闻', 1], ['选手风采', 2], ['大赛视频', 3]], @post.cats_id) %>
+							<%= f.select(:cats_id, options_for_select([['未分类'], ['大赛新闻', 1], ['选手风采', 2], ['大赛视频', 3]]))%>
 						</td>
 	    			</tr>
 	    			<tr>
@@ -85,8 +77,8 @@
 
 	<div class="sep"></div>
 	<div class="sep5"></div>
-  <ul class="tips"><li><strong>文章标题</strong> &nbsp;<span class="secondary">文章标题只能唯一不可重复。</span><div class="sep10"></div></li><li><strong>上传图片</strong> &nbsp;<span class="secondary">上传图片最好小于500K，如果图片过大导致服务器维护困难，山西省网上家长学校不予负责。</span><div class="sep10"></div></li><li><strong>视频链接地址</strong> &nbsp;<span class="secondary">视频本服务器不予支持，目前只支持youku中的视频。请复制youku视频分享地址，并粘贴于此。</span><div class="sep10"></div></li><li><strong>文章分类</strong> &nbsp;<span class="secondary">必须选择相应栏目。</span></li></ul>
-	
+	<ul class="tips"><li><strong>文章标题</strong> &nbsp;<span class="secondary">文章标题只能唯一不可重复。</span><div class="sep10"></div></li><li><strong>上传图片</strong> &nbsp;<span class="secondary">上传图片最好小于500K，如果图片过大导致服务器维护困难，山西省网上家长学校不予负责。</span><div class="sep10"></div></li><li><strong>视频链接地址</strong> &nbsp;<span class="secondary">视频本服务器不予支持，目前只支持youku中的视频。请复制youku视频分享地址，并粘贴于此。</span><div class="sep10"></div></li><li><strong>文章分类</strong> &nbsp;<span class="secondary">必须选择相应栏目。</span></li></ul>
+
 	                </div>
 	            </td>
 

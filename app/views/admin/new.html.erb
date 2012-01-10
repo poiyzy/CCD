@@ -44,11 +44,7 @@
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle"></td>
-	        			<td width="auto"><span class="gray f12">项目代号只能使用半角的 a-z 和阿拉伯数字 0-9，全小写。项目代号将会出现在 URL 及文件夹名中。</span></td>
-	    			</tr>
-	    			<tr>
-	        			<td width="120" align="right" valign="middle">图片链接地址</td>
-	        			<td width="auto"><%= f.text_field :pic, :class => "sl" %></td>
+	        			<td width="auto"><span class="gray f12">请不要重复发布，需要唯一！</span></td>
 	    			</tr>
 	    			<tr>
 	        			<td width="120" align="right" valign="middle">上传图片</td>
@@ -81,7 +77,7 @@
 
 	<div class="sep"></div>
 	<div class="sep5"></div>
-	<ul class="tips"><li><strong>项目代号</strong> &nbsp;<span class="secondary">项目代号将会出现在诸如 URL，文件夹和邮件地址这样的地方，因此请使用一个简短且容易记忆的名字，只能使用字母和数字（正则表达式规则 [a-z0-9]{1,32}）。该名字被保存到系统中会是全小写形式。</span><div class="sep10"></div></li><li><strong>项目名称</strong> &nbsp;<span class="secondary">项目的正式名字，可以使用 32 个任意字符。</span><div class="sep10"></div></li><li><strong>产品类型</strong> &nbsp;<span class="secondary">项目所产生的产品的类型。如果尚未确定，请选择 TBD。</span><div class="sep10"></div></li><li><strong>方案定义</strong> &nbsp;<span class="secondary">项目的成功，需要一个清晰的方案定义（Solution Definition）。项目究竟打算为谁解决什么问题，请用一句话清晰描述。很多时候，也就是创业公司的 Mission Statement。请一定花时间细细打磨你的方案定义。</span></li></ul>
+	<ul class="tips"><li><strong>文章标题</strong> &nbsp;<span class="secondary">文章标题只能唯一不可重复。</span><div class="sep10"></div></li><li><strong>上传图片</strong> &nbsp;<span class="secondary">上传图片最好小于500K，如果图片过大导致服务器维护困难，山西省网上家长学校不予负责。</span><div class="sep10"></div></li><li><strong>视频链接地址</strong> &nbsp;<span class="secondary">视频本服务器不予支持，目前只支持youku中的视频。请复制youku视频分享地址，并粘贴于此。</span><div class="sep10"></div></li><li><strong>文章分类</strong> &nbsp;<span class="secondary">必须选择相应栏目。</span></li></ul>
 
 	                </div>
 	            </td>
