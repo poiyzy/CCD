@@ -78,9 +78,9 @@ ul { list-style-type: none;}
             <div id="slider">
        			<ul id="sliderContent">
 					<% @postnews.each do |pn| %>
-						<% unless pn.pic.empty? %>
+						<% if pn.excerpt_image_file_name %>
           				<li class="sliderImage">
-               				<a href="/posts/<%= pn.id %>" target="_blank"><img src="<%= pn.pic %>" alt="1" /></a>
+               				<a href="/posts/<%= pn.id %>" target="_blank"><img src="<%= pn.excerpt_image.url(:thumb) %>" alt="1" /></a>
               				<span class="top"><strong><%= pn.title %></strong></span>
        						</li>
 						<% end %>
@@ -148,7 +148,7 @@ ul { list-style-type: none;}
             <div class="phototext">
 				<% @postpics.each do |pp| %>
             		<div class="photoli">
-	                	<div class="photo1"><img src="<%= pp.pic %>" width="125" height="80" border="0" /></div>
+	                	<div class="photo1"><a href="/posts/<%= pp.id %>"><img src="<%= pp.excerpt_image.url(:thumb) %>" width="125" height="80" border="0" /></a></div>
 	                  	<div class="photo2"><a href="/posts/<%= pp.id %>"><%= truncate(pp.title, :length => 12) %></a></div>
 	                </div>
 				<% end %>
@@ -162,7 +162,7 @@ ul { list-style-type: none;}
             <div class="videotext">
 				<% @postvideos.each do |pv| %>
             		<div class="videoli">
-	                	<div class="video1"><img src="<%= pv.video_pic %>" width="125" height="80" border="0" /></div>
+	                	<div class="video1"><a href="/posts/<%= pv.id %>"><img src="<%= pv.video_pic %>" width="125" height="80" border="0" /></a></div>
 	                  	<div class="video2"><a href="/posts/<%= pv.id %>"><%= truncate(pv.title, :length => 12) %></a></div>
 	                </div>
 				<% end %>

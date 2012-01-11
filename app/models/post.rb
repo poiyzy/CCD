@@ -1,7 +1,10 @@
 class Post < ActiveRecord::Base
   has_attached_file :excerpt_image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
   require "open-uri"
+  
   default_scope :order => 'created_at DESC'
+  
+  validates :content, :presence => true
   
   def video_share
     @videoshare

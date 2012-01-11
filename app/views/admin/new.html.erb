@@ -31,7 +31,11 @@
 <div class="sep20"></div>
 
 <div id="projects">
-
+<% if @post.errors.any? %>
+  <% @post.errors.messages.each do |message| %>
+    <% message.last.last.html_safe %>
+  <% end %>
+<% end %>
 <div class="project_box" id="p_231"><table cellpadding="0" cellspacing="0" border="0" width="100%">
 	<tr>
 	   <td width="auto" class="dual_left" valign="top"><div class="inner">
