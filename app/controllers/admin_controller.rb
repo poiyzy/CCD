@@ -13,9 +13,11 @@ class AdminController < ApplicationController
   def created
     @post = Post.new(params[:post])
 
-    @post.save
-    
-    redirect_to admin_index_path
+    if @post.save
+      redirect_to admin_index_path
+    else
+      render :action => :new
+    end
   end
   
   def edit

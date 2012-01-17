@@ -1,31 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="zh-CN">
-<head>
-	<meta charset="UTF-8" />
-	<meta content="True" name="HandheldFriendly" />
-	<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0; name='viewport'" />
-	<title>希望之星 › 控制面板</title>
-	<link rel="stylesheet" type="text/css" media="screen"  href="/stylesheets/desktop.css?v=1.0003" />
-	<link rel="shortcut icon" href="/favicon.ico" />	
-</head>
-<body>
-    <div id="Wrapper">
-    <div id="Main">
-        <div class="sep20"></div>
-        <table cellpadding="8" cellspacing="0" border="0" width="100%" id="Top">
-            <tr>
-                <td width="140" text-align="center" id="TopLogo" onclick="location.href = '/';">希望之星</td>
-
-                <td width="235" align="right" valign="middle" id="TopMember">用户：<%= session[:user_login] %> | <%= link_to "退出", quit_login_index_path, :class => "black" %></td>
-            </tr>
-        </table>
-        <div class="sep20"></div>
-        <div class="c"></div>
-        <div id="Single">
-            
-    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="dual">
-        <tr>
-            <td width="auto" class="dual_left" valign="top"><div class="inner">
+<td width="auto" class="dual_left" valign="top"><div class="inner">
 <h1>新建文章</h1>
 
 <div class="sep20"></div>
@@ -98,60 +71,4 @@
 
                 </div>
             </td>
-            <td width="250" class="dual_right" valign="top" style="background-image: url('/images/shade1.png'); background-repeat: repeat-y;">
-                
-                <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                    <tr>
-                        <td colspan="4"><div class="sep20"></div></td>
-                    </tr>
-                    <tr>
-                        <td width="15" height="32" align="left"><img src="/images/section.png" /></td>
-                        <td width="32" height="32"><a href="/admin"><img src="/images/ico32_cog.png" border="0" alt="Projects" /></a></td>
-                        <td width="10" height="32"></td>
-                        <td width="auto" height="32" align="left" valign="middle"><a href="/admin" class="nav2 black" style="color:#DB4937;">文章管理</a></td>  
-                    </tr>
-                    <tr>
-                        <td colspan="4"><div class="sep10"></div></td>
-                    </tr>
-                    <tr>
-                        <td width="15" height="32" align="left"></td>
-                        <td width="32" height="32"><a href="/admin/apply"><img src="/images/ico32_member.png" border="0" alt="Account" /></a></td>
-                        <td width="10" height="32"></td>
-                        <td width="auto" height="32" align="left" valign="middle"><a href="/admin/apply" class="nav2 black">在线报名情况</a></td>  
-                    </tr>
-                    
-                    <!--<tr>
-                        <td colspan="4"><div class="sep10"></div></td>
-                    </tr>
-                    <tr>
-                        <td width="15" height="32" align="left"></td>
-                        <td width="32" height="32"><a href="/stats"><img src="/static/images/ico32_stats.png" border="0" alt="Stats" /></a></td>
-                        <td width="10" height="32"></td>
-                        <td width="auto" height="32" align="left" valign="middle"><a href="/stats" class="nav2 black">Stats</a></td>  
-                    </tr>
-                    <tr>
-                        <td colspan="4"><div class="sep10"></div></td>
-                    </tr>
-                    <tr>
-                        <td width="15" height="32" align="left"></td>
-                        <td width="32" height="32"><a href="/experimental"><img src="/static/images/ico32_labs.png" border="0" alt="Experimental" /></a></td>
-                        <td width="10" height="32"></td>
-                        <td width="auto" height="32" align="left" valign="middle"><a href="/experimental" class="nav2 black">Experimental</a></td>  
-                    </tr>-->
-                    <tr>
-                        <td colspan="4"><div class="sep20"></div></td>
-                    </tr>
-                </table>
-                
-            </td>
-        </tr>
-    </table>
 
-        </div>
-        <div class="c"></div>
-        <div class="sep20"></div>
-        <div id="Bottom">&copy; 2011 <strong>希望之星</strong>&nbsp; • &nbsp;<a href="http://www.jiazhang.org" class="bottom" title="" rel="tipsy">山西省网上家长学校技术驱动</a><div class="sep5"></div></div>
-    </div>
-    </div>
-</body>
-</html>
