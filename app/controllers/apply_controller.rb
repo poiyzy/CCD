@@ -1,4 +1,6 @@
 class ApplyController < ApplicationController
+  layout 'apply'
+
   def index
   end
   
@@ -17,8 +19,11 @@ class ApplyController < ApplicationController
       a.pname = params[:pname]
     end
     
-    @apply.save!
+    if @apply.save
+      redirect_to apply_index_path
+    else
+      render :index
+    end
     
-    redirect_to apply_index_path
   end
 end

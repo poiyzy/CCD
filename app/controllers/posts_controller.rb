@@ -1,5 +1,7 @@
 # encoding: utf-8
 class PostsController < ApplicationController
+  layout 'post'
+
   def index
     @postnews = Post.find(:all, :limit => "9", :conditions => { :cats_id => 1 })
     @postpics = Post.find(:all, :limit => "8", :conditions => { :cats_id => 2 })

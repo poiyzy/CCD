@@ -1,0 +1,386 @@
+/*# 这是一个测试，目前为空。没有内容*/
+/*这个源自single.css 分支 modify*/
+/*这个源自style.css 分支 master*/
+/*这是两个分支的merge，由modify merge master*/
+
+@charset "utf-8";
+#top {
+	height: 270px;
+	width: 980px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#main {
+	height:auto;
+	min-height:610px;
+	width: 980px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#main .news {
+	display: block;
+	float: left;
+	min-height:610px;
+	height: auto;
+	width: 720px;
+}
+#main .news .newsnavi {
+	font-size: 14px;
+	display: block;
+	float: left;
+	width: 700px;
+	padding-top: 10px;
+	padding-left: 19px;
+	height: 20px;
+}
+#main .news .newscontent {
+	display: block;
+	float: left;
+	min-height:570px;
+	height: auto;
+	width: 700px;
+	padding-top: 10px;
+	padding-left: 19px;
+}
+.ctitle {
+	font-size: 14px;
+	font-weight: bold;
+	color: #2D5EA1;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 30px;
+	width: 699px;
+}
+.ctime {
+	font-size: 12px;
+	color: #999;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 20px;
+	width: 699px;
+	padding-top: 10px;
+}
+.ccontent {
+	font-size: 14px;
+	color: #000;
+	display: block;
+	float: left;
+	width: 689px;
+	padding-top: 10px;
+	line-height: 1.5;
+	padding-right: 10px;
+}
+
+
+
+
+
+.petition {
+	height: 280px;
+	width: 979px;
+}
+.news .newpic {
+	display: block;
+	padding: 10px;
+	float: left;
+	height: 259px;
+	width: 380px;
+}
+.news .newtext {
+	display: block;
+	padding: 10px;
+	float: left;
+	height: 259px;
+	width: 300px;
+}
+.newtitle {
+	display: block;
+	float: left;
+	height: 35px;
+	width: 299px;
+}
+.newtitle1 {
+	background-image: url(/images/title.jpg);
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 35px;
+	width: 39px;
+}
+.newtitle2 {
+	background-image: url(/images/titlebg.jpg);
+	background-repeat: repeat-x;
+	display: block;
+	float: left;
+	height: 26px;
+	width: 259px;
+	font-weight: bold;
+	color: #FFF;
+	padding-top: 9px;
+}
+.news .newtext .newcontent {
+	display: block;
+	float: left;
+	height: 218px;
+	width: 299px;
+	padding-top: 5px;
+}
+.news .newtext .newcontent ul li {
+	display: block;
+	float: left;
+	list-style-type: none;
+	width: 297px;
+	height: 24px;
+	color: #666;
+}
+
+.news .petition {
+	display: block;
+	padding: 10px;
+	float: left;
+	height: 259px;
+	width: 239px;
+}
+
+
+
+#main .cooperation {
+	display: block;
+	float: left;
+	min-height:610px;
+	height:auto;
+	width: 259px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.weibo {
+	height: 330px;
+	width: 979px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.cooperation .coop1 {
+	display: block;
+	padding: 10px;
+	float: left;
+	height: 309px;
+	width: 310px;
+}
+.coop1title {
+	display: block;
+	float: left;
+	height: 35px;
+	width: 309px;
+}
+.coop1title2 {
+	background-image: url(/images/titlebg.jpg);
+	background-repeat: repeat-x;
+	display: block;
+	float: left;
+	height: 26px;
+	width: 269px;
+	font-weight: bold;
+	color: #FFF;
+	padding-top: 9px;
+}
+.cooperation .coop1 .coop1text {
+	line-height: 1.5;
+	display: block;
+	float: left;
+	height: 260px;
+	width: 309px;
+	padding-top: 10px;
+	font-size: 12px;
+}
+.cooperation .coop2 {
+	display: block;
+	padding: 10px;
+	float: left;
+	height: 309px;
+	width: 370px;
+}
+.cooperation .coop2 .coop2text {
+	font-size: 12px;
+	line-height: 1.5;
+	display: block;
+	float: left;
+	height: 154px;
+	width: 369px;
+}
+.cooperation  .weibo {
+	display: block;
+	float: left;
+	height: 319px;
+	width: 239px;
+	padding-right: 9px;
+	padding-bottom: 9px;
+	padding-left: 9px;
+}
+
+#main .media {
+	display: block;
+	float: left;
+	height: 260px;
+	width: 979px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.media .photo {
+	display: block;
+	float: left;
+	height: 249px;
+	width: 540px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.media .photo .phototitle {
+	display: block;
+	float: left;
+	height: 35px;
+	width: 539px;
+}
+.media .photo .phototext {
+	display: block;
+	float: left;
+	height: 213px;
+	width: 539px;
+}
+.photoli {
+	display: block;
+	float: left;
+	height: 101px;
+	width: 126px;
+	padding-top: 5px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.photoli .photo1 {
+	display: block;
+	float: left;
+	height: 80px;
+	width: 125px;
+}
+.photoli .photo2 {
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 17px;
+	width: 125px;
+	padding-top: 3px;
+}
+.photoli .photo2 a {
+	color: #e7673a;
+	text-decoration: none;
+}
+
+
+.phototitle2 {
+	background-image: url(/images/titlebg.jpg);
+	background-repeat: repeat-x;
+	display: block;
+	float: left;
+	height: 26px;
+	width: 499px;
+	font-weight: bold;
+	color: #FFF;
+	padding-top: 9px;
+}
+.media .video {
+	display: block;
+	float: left;
+	height: 249px;
+	width: 399px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.media .video .videotitle {
+	display: block;
+	float: left;
+	height: 35px;
+	width: 398px;
+}
+.videotitle2 {
+	background-image: url(/images/titlebg.jpg);
+	background-repeat: repeat-x;
+	display: block;
+	float: left;
+	height: 26px;
+	width: 359px;
+	font-weight: bold;
+	color: #FFF;
+	padding-top: 9px;
+}
+.media .video .videotext {
+	display: block;
+	float: left;
+	height: 213px;
+	width: 398px;
+}
+.videoli {
+	display: block;
+	float: left;
+	height: 101px;
+	width: 124px;
+	padding-top: 5px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.videoli .video1 {
+	display: block;
+	float: left;
+	height: 80px;
+	width: 123px;
+}
+.videoli .video2 {
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 17px;
+	width: 123px;
+	padding-top: 3px;
+}
+.videoli .video2 a {
+	color: #e7673a;
+	text-decoration: none;
+}
+
+#foot {
+	height: 87px;
+	width: 980px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-image: url(/images/footbg.jpg);
+	background-repeat: repeat-x;
+}
+#foot .foottext {
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	display: block;
+	float: left;
+	height: 51px;
+	width: 79px;
+	padding-left: 30px;
+	padding-top: 35px;
+}
+#foot .footpic {
+	display: block;
+	float: left;
+	height: 65px;
+	width: 850px;
+	padding-top: 21px;
+}
+

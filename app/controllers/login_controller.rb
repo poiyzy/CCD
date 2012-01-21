@@ -1,5 +1,7 @@
 # encoding: utf-8
 class LoginController < ApplicationController
+  layout 'login'
+
   def new
   end
   
